@@ -12,8 +12,20 @@
     <%= stylesheet_link_tag "normalize", "styles" %>
 
   </head>
-  
+
   <body class="<%= page_classes %>">
+    <!-- Scrolling Side Navigation -->
+    <div id="main-slide-nav" class="slide-nav sliding-nav">
+      <a href="#" class="active" data-index="0">Cape de Verde Islands</a>
+      <a href="#" data-index="0">Rio de Janeiro</a>
+      <a href="#" data-index="0">Maldonado</a>
+      <a href="#" data-index="0">Río Negro</a>
+      <a href="#" data-index="0">Bahia Blanca</a>
+      <a href="#" data-index="0">Buenos Ayres</a>
+      <a href="#" data-index="0">St. Fe</a>
+      <a href="#" data-index="0">Banda Oriental</a>
+      <a href="#" data-index="0">Patagonia</a>
+    </div>
     <%= yield %>
     <%= javascript_include_tag  "jquery","tubular","main" %>
   </body>
