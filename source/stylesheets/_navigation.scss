@@ -1,0 +1,22 @@
+.navigation{
+	width: 23%;
+	height: 100%;
+	background-color: #212121;
+	padding: 20px;
+}
+
+.logo{
+		
+		
+}
+
+.items-list {
+    @include make-row();     
+    .item {
+		@include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(4);
+    }
+        
+    
+}
