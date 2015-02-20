@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="darwin">
   <head>
     <meta charset="utf-8">
     
@@ -7,40 +7,30 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
-    
+    <title><%= current_page.data.title || "Voyage of the HMS Beagle" %></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="../javascripts/angapp.js"></script>
     <%= stylesheet_link_tag "normalize", "styles" %>
 
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %>" ng-controller="mainController">
+    <div id="main">
+      <%= yield %>
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view></div>    
+    </div>
     <!-- Scrolling Side Navigation -->
     <div id="main-slide-nav" class="slide-nav sliding-nav">
-      <a href="#" class="active" data-index="0">Cape de Verde Islands</a>
-      <a href="#" data-index="0">Rio de Janeiro</a>
-      <a href="#" data-index="0">Maldonado</a>
-      <a href="#" data-index="0">Río Negro</a>
-      <a href="#" data-index="0">Bahia Blanca</a>
-      <a href="#" data-index="0">Buenos Ayres</a>
-      <a href="#" data-index="0">St. Fe</a>
-      <a href="#" data-index="0">Banda Oriental</a>
-      <a href="#" data-index="0">Patagonia</a>
-      <a href="#" data-index="0">Santa Cruz</a>
-      <a href="#" data-index="0">Tierra del Fuego</a>
-      <a href="#" data-index="0">Falkland Islands</a>
-      <a href="#" data-index="0">Strait of Magellan</a>
-      <a href="#" data-index="0">Chile</a>
-      <a href="#" data-index="0">Chonos Islands</a>
-      <a href="#" data-index="0">Concepcion</a>
-      <a href="#" data-index="0">Cordillera</a>
-      <a href="#" data-index="0">Peru</a>
-      <a href="#" data-index="0">Galapagos Archipelago</a>
-      <a href="#" data-index="0">Tahiti &amp; New Zealand</a>
-      <a href="#" data-index="0">Australia</a>
-      <a href="#" data-index="0">Cocos Islands</a>
-      <a href="#" data-index="0">Mauritius</a>
+      <a href="#peru" data-index="0">Peru</a>
+      <a href="#riodejaneiro" data-index="0">Rio de Janeiro</a>
+      <a href="#santacruz" data-index="0">Santacruz</a>
+      <a href="#straitofmagellan" data-index="0">Strait of Magellan</a>
+      <a href="#tahitinewzealand" data-index="0">Tahiti &amp; New Zealand</a>
+      <a href="#tierradelfuego" data-index="0">Tierra Del Fuego</a>
     </div>
-    <%= yield %>
-    <%= javascript_include_tag  "jquery","tubular","angular.min","angular-route","main" %>
+    <%= javascript_include_tag  "jquery","tubular","main" %>
   </body>
 </html>
