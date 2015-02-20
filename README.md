@@ -4,7 +4,23 @@ Splash page example - citruscoders.com/darwin/
 
 ##To Do
 
-#####Make some sort of navigation for the different places hes visited.  Most likely vertical nav.
+Louis
+
+* Timeline on Interior Page
+
+* Develop Interior Pages for each island
+
+Miguel
+
+*
+
+*
+
+Jeff
+
+*
+
+*
 
 #####Figure out what each informational page looks like.  What content should go there?
 

@@ -18,20 +18,23 @@
 
   <body class="<%= page_classes %>" ng-controller="mainController">
     <div id="main">
+      <a href="#">Restart</a>    
       <%= yield %>
       <!-- angular templating -->
       <!-- this is where content will be injected -->
-      <div ng-view></div>    
+      <div ng-view></div>
     </div>
     <!-- Scrolling Side Navigation -->
-    <div id="main-slide-nav" class="slide-nav sliding-nav">
-      <a href="#peru" data-index="0">Peru</a>
-      <a href="#riodejaneiro" data-index="0">Rio de Janeiro</a>
-      <a href="#santacruz" data-index="0">Santacruz</a>
-      <a href="#straitofmagellan" data-index="0">Strait of Magellan</a>
-      <a href="#tahitinewzealand" data-index="0">Tahiti &amp; New Zealand</a>
-      <a href="#tierradelfuego" data-index="0">Tierra Del Fuego</a>
-    </div>
+    <nav>
+      <ul class="slide-nav">
+        <li><a href="#peru" data-index="0">Peru</a></li>
+        <li><a href="#riodejaneiro" data-index="0">Rio de Janeiro</a></li>
+        <li><a href="#santacruz" data-index="0">Santacruz</a></li>
+        <li><a href="#straitofmagellan" data-index="0">Strait of Magellan</a></li>
+        <li><a href="#tahitinewzealand" data-index="0">Tahiti &amp; New Zealand</a></li>
+        <li><a href="#tierradelfuego" data-index="0">Tierra Del Fuego</a></li>
+      </ul>
+    </nav>
     <%= javascript_include_tag  "jquery","tubular","main" %>
   </body>
 </html>

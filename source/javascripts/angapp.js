@@ -42,14 +42,11 @@
 
 	});
 
-	// create the controller and inject Angular's $scope
 	darwin.controller('mainController', function($scope) {
-		// create a message to display in our view
 		$scope.message = 'Home';
 	});
 
 	darwin.controller('peru', function($scope) {
-		// create a message to display in our view
 		$scope.message = 'Peru';
 	});
 
@@ -62,7 +59,6 @@
 	});
 
 	darwin.controller('straitofmagellan', function($scope) {
-		// create a message to display in our view
 		$scope.message = 'Strait of Magellan';
 	});
 
