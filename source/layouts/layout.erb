@@ -29,8 +29,10 @@
       <div class="page {{ pageClass }}" ng-view></div>
 
     </div>
-    <!-- Scrolling Side Navigation -->
 
+    <%= yield %>
+
+    
     <nav class="slide-nav">
       <div class="drawer">
       </div>
@@ -41,15 +43,13 @@
             <p> Peru </p>
           </a>
         </li>
-        <li><a href="#riodejaneiro" data-index="0">Rio de Janeiro</a></li>
-        <li><a href="#santacruz" data-index="0">Santacruz</a></li>
-        <li><a href="#straitofmagellan" data-index="0">Strait of Magellan</a></li>
-        <li><a href="#tahitinewzealand" data-index="0">Tahiti &amp; New Zealand</a></li>
-        <li><a href="#tierradelfuego" data-index="0">Tierra Del Fuego</a></li>
+        <li><a href="#riodejaneiro">Rio de Janeiro</a></li>
+        <li><a href="#santacruz">Santacruz</a></li>
+        <li><a href="#straitofmagellan">Strait of Magellan</a></li>
+        <li><a href="#tahitinewzealand">Tahiti &amp; New Zealand</a></li>
+        <li><a href="#tierradelfuego">Tierra Del Fuego</a></li>
       </ul>
     </nav>
-
-    <%= yield %>
 
 
     <%= javascript_include_tag  "jquery","tubular","main" %>
