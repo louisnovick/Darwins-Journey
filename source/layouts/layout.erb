@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="darwin">
+<html>
   <head>
     <meta charset="utf-8">
     
@@ -11,20 +11,26 @@
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="../javascripts/angular-animate.min.js"></script>
     <script src="../javascripts/angapp.js"></script>
     <%= stylesheet_link_tag "normalize", "styles" %>
 
   </head>
 
-  <body class="<%= page_classes %>" ng-controller="mainController">
+  <body class="<%= page_classes %>"  ng-app="darwin">
     <div id="main">
-      <a href="#">Restart</a>    
-      <%= yield %>
-      <!-- angular templating -->
+      <div class="banner"></div>
+      <a href="#">Restart</a>
       <!-- this is where content will be injected -->
-      <div ng-view></div>
+
+      <!-- This is Index.html.erb-->
+
+      <!-- This is the html view located in pages-->
+      <div class="page {{ pageClass }}" ng-view></div>
+
     </div>
     <!-- Scrolling Side Navigation -->
+
     <nav class="slide-nav">
       <div class="drawer">
       </div>
@@ -42,6 +48,10 @@
         <li><a href="#tierradelfuego" data-index="0">Tierra Del Fuego</a></li>
       </ul>
     </nav>
+
+    <%= yield %>
+
+
     <%= javascript_include_tag  "jquery","tubular","main" %>
   </body>
 </html>

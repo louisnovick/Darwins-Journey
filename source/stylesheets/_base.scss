@@ -1,6 +1,15 @@
 $main-font: "IM Fell English";
 $dark-grey: #373737;
 
+html { overflow-y:hidden; }
+.page { 
+	bottom:0; 
+	position:absolute; 
+	top:0;  
+	width:100%; 
+}
+
+
 body { 
   //background: url(../images/background.svg) no-repeat center center fixed;
   //background: url(https://ununsplash.imgix.net/photo-1416431168657-a6c4184348ab?q=75&fm=jpg&s=20ba248730c200af0d30c9ba81854867) no-repeat center center fixed; 
@@ -14,13 +23,38 @@ a {
 	color: #fff;
 }
 
-.container{
+.homecontainer{
 	@include container-fixed();
+	padding-top: 160px;
+	.badge_container {
+		width: 100%;
+		height: auto;
+		margin: 0px auto;
+		background: rgba(33,33,33,.9);
+		text-align: center;
+		height: 350px;
+		border-radius: 20px;
+		padding: 40px;
+		div {
+			font-family: 'IM Fell English', serif;
+			color: #fff;
+			display: block;
+			img {
+				max-width: 150px;
+			}
+			width: 33%;
+			float: left;
+			margin: 0px auto;
+			display: block;
+		}
+	}
 	.start_container {
+		border-radius: 20px;
 		background-color: rgba(33,33,33,0.9);
 		text-align: center;
 		font-family: $main-font;
 		padding: 20px;
+		margin-bottom: 5px;
 		h1 {
 			font-size: 3em;
 			color: #fff;
@@ -59,20 +93,108 @@ section{
 	background: rgba(33,33,33,.9);
 	float: right;
 	padding: 20px 35px;
-	height: 100%;
-	.badge_container > div {
-		img {
-			max-width: 150px;
-		}
-		width: 33%;
-		float: left;
-		margin: 0px auto;
-		display: block;
-	}
+	height: 50%;
+	margin-top: 220px;
 }
 
-.badge_container {
-	width: 100%;
-	margin: 0px auto;
-	text-align: center;
+* {
+  @include box-sizing(border-box);
 }
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+.page-home 		{  }
+.page-peru 	{ background:#E59400; color:#a55400; }
+.page-sc 	{ background:#ffa6bb; color:#9e0000; }
+
+/* ANIMATIONS
+============================================================================= */
+
+.page.ng-leave 	{ z-index:9999; }
+.page.ng-enter 	{ z-index:8888; }
+
+/* page specific animations ------------------------ */
+
+/* home -------------------------- */
+.page-home.ng-leave         {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-home.ng-enter 		{  
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;    
+}
+
+/* about ------------------------ */
+.page-peru.ng-leave        {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-peru.ng-enter 		{  
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;     
+}
+
+/* contact ---------------------- */
+.page-sc.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-sc.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+	0% { -webkit-transform: rotateZ(0deg); }
+	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+	40% { -webkit-transform: rotateZ(17deg); }
+	60% { -webkit-transform: rotateZ(16deg); }
+	100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
+}
+@-moz-keyframes rotateFall {
+	0% { -moz-transform: rotateZ(0deg); }
+	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+	40% { -moz-transform: rotateZ(17deg); }
+	60% { -moz-transform: rotateZ(16deg); }
+	100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+}
+@keyframes rotateFall {
+	0% { transform: rotateZ(0deg); }
+	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% { transform: rotateZ(17deg); }
+	60% { transform: rotateZ(16deg); }
+	100% { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* scale up */
+@keyframes scaleUp {
+	from 		{ opacity: 0.3; transform: scale(0.8); }
+}
+@-moz-keyframes scaleUp {
+	from 		{ opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+
+
