@@ -1,5 +1,5 @@
 $().ready(function() {
-	$('.page-home').tubular({
+	$('#video-bg').tubular({
 		videoId: 'XREElnb_wlQ',
 		start: 4
 	}); 

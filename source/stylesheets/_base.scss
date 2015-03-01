@@ -26,11 +26,35 @@ a {
 .homecontainer{
 	@include container-fixed();
 	padding-top: 160px;
+	.badge_container {
+		width: 100%;
+		height: auto;
+		margin: 0px auto;
+		background: rgba(33,33,33,.9);
+		text-align: center;
+		height: 350px;
+		border-radius: 20px;
+		padding: 40px;
+		div {
+			font-family: 'IM Fell English', serif;
+			color: #fff;
+			display: block;
+			img {
+				max-width: 150px;
+			}
+			width: 33%;
+			float: left;
+			margin: 0px auto;
+			display: block;
+		}
+	}
 	.start_container {
+		border-radius: 20px;
 		background-color: rgba(33,33,33,0.9);
 		text-align: center;
 		font-family: $main-font;
 		padding: 20px;
+		margin-bottom: 5px;
 		h1 {
 			font-size: 3em;
 			color: #fff;
@@ -71,21 +95,6 @@ section{
 	padding: 20px 35px;
 	height: 50%;
 	margin-top: 220px;
-	.badge_container > div {
-		img {
-			max-width: 150px;
-		}
-		width: 33%;
-		float: left;
-		margin: 0px auto;
-		display: block;
-	}
-}
-
-.badge_container {
-	width: 100%;
-	margin: 0px auto;
-	text-align: center;
 }
 
 * {
