@@ -25,9 +25,16 @@
       <div ng-view></div>
     </div>
     <!-- Scrolling Side Navigation -->
-    <nav>
-      <ul class="slide-nav">
-        <li><a href="#peru" data-index="0">Peru</a></li>
+    <nav class="slide-nav">
+      <div class="drawer">
+      </div>
+      <ul>
+        <li>
+          <a href="#peru" data-index="0">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Peru </p>
+          </a>
+        </li>
         <li><a href="#riodejaneiro" data-index="0">Rio de Janeiro</a></li>
         <li><a href="#santacruz" data-index="0">Santacruz</a></li>
         <li><a href="#straitofmagellan" data-index="0">Strait of Magellan</a></li>
