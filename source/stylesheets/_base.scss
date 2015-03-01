@@ -1,5 +1,8 @@
+$main-font: "IM Fell English";
+$dark-grey: #373737;
+
 body { 
-  background: url(../images/background.svg) no-repeat center center fixed;
+  //background: url(../images/background.svg) no-repeat center center fixed;
   //background: url(https://ununsplash.imgix.net/photo-1416431168657-a6c4184348ab?q=75&fm=jpg&s=20ba248730c200af0d30c9ba81854867) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -7,17 +10,69 @@ body {
   background-size: cover;
 }
 
+a {
+	color: #fff;
+}
+
 .container{
-	
 	@include container-fixed();
+	.start_container {
+		background-color: rgba(33,33,33,0.9);
+		text-align: center;
+		font-family: $main-font;
+		padding: 20px;
+		h1 {
+			font-size: 3em;
+			color: #fff;
+			line-height: 25px;
+		}
+		a {
+			font-size: 2.5em;
+			background-color: #394E7B;
+			padding: 0px 80px;
+			border-radius: 10px;
+		}
+	}
 }
 
 .banner{
 	background: url(../images/banner.png) no-repeat;
 	padding: 70px;
-	margin-top: 30px;
 }
 
 section{
 	@include clearfix();
+}
+
+#tubular-container {
+	z-index: -99 !important;
+}
+#tubular-shield {
+	z-index: -99 !important;
+}
+.voyage_content {
+	font-family: 'IM Fell English', serif;
+	display: block;
+	width: 100%;
+	margin: 0px auto;
+	color: #fff;
+	background: rgba(33,33,33,.9);
+	float: right;
+	padding: 20px 35px;
+	height: 100%;
+	.badge_container > div {
+		img {
+			max-width: 150px;
+		}
+		width: 33%;
+		float: left;
+		margin: 0px auto;
+		display: block;
+	}
+}
+
+.badge_container {
+	width: 100%;
+	margin: 0px auto;
+	text-align: center;
 }
