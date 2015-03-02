@@ -15,6 +15,11 @@
 				controller  : 'peru',
 			})
 
+			.when('/capeverde', {
+				templateUrl : 'pages/capeverd.html',
+				controller  : 'capeverd',
+			})
+
 			.when('/riodejaneiro', {
 				templateUrl : 'pages/riodejaneiro.html',
 				controller  : 'riodejaneiro',
@@ -50,6 +55,12 @@
 	darwin.controller('peru', function($scope) {
 		$scope.message = 'Peru';
 		$scope.pageClass = 'page-peru';
+	});
+
+	darwin.controller('capeverd', function($scope) {
+		$scope.message = 'Cape de Verd Islands';
+		$scope.title = 'Cape de Verd Islands';
+		$scope.pageClass = 'page-capeverd';
 	});
 
 	darwin.controller('riodejaneiro', function($scope) {

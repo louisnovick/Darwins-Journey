@@ -19,7 +19,9 @@
 
   <body class="<%= page_classes %>"  ng-app="darwin">
     <div id="main">
-      <div class="banner"></div>
+      <div class="banner">
+        <h1>Charles Darwin | <span>Voyage of the HMS Beagle</span></h1>
+      </div>
       <a href="#">Restart</a>
       <!-- this is where content will be injected -->
 
@@ -32,19 +34,23 @@
 
     <%= yield %>
 
-    
+
     <nav class="slide-nav">
       <div class="drawer">
       </div>
       <ul>
         <li>
-          <a href="#peru" data-index="0">
+          <a href="#capeverde">
             <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Cape de Verd Islands </p>
+          </a>
+        </li>
+        <li>
+          <a href="#peru" data-index="0">
             <p> Peru </p>
           </a>
         </li>
         <li><a href="#riodejaneiro">Rio de Janeiro</a></li>
-        <li><a href="#santacruz">Santacruz</a></li>
         <li><a href="#straitofmagellan">Strait of Magellan</a></li>
         <li><a href="#tahitinewzealand">Tahiti &amp; New Zealand</a></li>
         <li><a href="#tierradelfuego">Tierra Del Fuego</a></li>
