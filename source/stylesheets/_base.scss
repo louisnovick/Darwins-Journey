@@ -167,6 +167,14 @@ nav.timeline {
 	}
 }
 
+@media only screen and (max-width: 1150px) {
+	.page {
+		width: 1150px;
+		overflow: visible !important;
+		min-height: 1050px !important;
+	}
+}
+
 .page-home 		{ /*background video*/ }
 .page-peru 	{ background:#E59400; }
 .page-sc 	{ background:#ffa6bb; }
@@ -304,7 +312,7 @@ footer.int_footer {
 	margin: 0px auto;
 	font-family: "IM Fell English";
 	max-width: 1150px;
-	padding: 25px 40px;
+	padding: 25px 40px 5px 40px;
 	p {
 		line-height: 25px;
 	}
@@ -338,14 +346,14 @@ footer.int_footer {
 		}
 		a {
 			background-color: #1daf71;
-			border-radius: 10px;
-			font-size: 1.3rem;
+			border-radius: 5px;
+			font-size: 1.5rem;
 			position: relative;
 			font-weight: bold;
 			display: inline-block;
-			padding: 6px;
+			padding: 5px 15px;
 			bottom: 90px;
-			left: 215px;
+			left: 225px;
 		}
 	}
 }

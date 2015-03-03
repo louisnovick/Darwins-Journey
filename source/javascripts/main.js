@@ -1,4 +1,9 @@
 $().ready(function() {
+	$('#video-bg').tubular({
+		videoId: 'XREElnb_wlQ',
+		start: 4
+	}); 
+
 	$('.slide-nav').mouseenter(function(){
 		$( this ).css( "margin", "0px 0px" );
 		$( this ).css("-webkit-transition","all 0.3s");
@@ -15,14 +20,6 @@ $().ready(function() {
 		$( this ).css("transition","all 0.3s");
 	});
 });
-
-if ($( ".page-home" ).length) {
-    console.log('home');
-	$('#video-bg').tubular({
-		videoId: 'XREElnb_wlQ',
-		start: 4
-	}); 
-}
 
 
 
