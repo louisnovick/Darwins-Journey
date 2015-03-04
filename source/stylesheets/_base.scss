@@ -77,13 +77,14 @@ a {
 .banner {
 	font-family: 'IM Fell English', serif;
 	top: 0;
-	background-color: $dark-grey;
-	width: 700px;
+	background-color: #373737;
 	height: 85px;
 	display: block;
-	position: absolute;
+	position: relative;
 	border: 3px solid #fff;
 	z-index: 2;
+	max-width: 700px;
+	padding: 0px 10px;
 	h1 {
 		color: #fff;
 		text-align: center;
@@ -167,24 +168,195 @@ nav.timeline {
 	}
 }
 
-@media only screen and (max-width: 1150px) {
-	.page {
-		width: 1150px;
-		overflow: visible !important;
-		min-height: 1050px !important;
+@media only screen and (max-width: 648px) {
+	.banner {
+		height: 55px;
+		max-width: 700px;
+		h1 {
+			font-size: 1.2em;
+		}
 	}
 }
 
 .page-home 		{ /*background video*/ }
-.page-peru 	{ background:#E59400; }
-.page-sc 	{ background:#ffa6bb; }
+.page-peru 	{ 
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1; 
+ }
+.page-sc {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
 .page-capeverd  { 
 	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
   	overflow: auto;
+  	z-index: 1;
 }
+.page-australia {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-bahiablanca {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-bandaoriental {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-buenosayres {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-chile {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-chiloe {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-concepcion {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-coral {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-cordillera {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-falklandislands {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-galapagos {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-maldonado {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-mauritius {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-patagonia {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-rionegro {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-santacruz {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-straitofmagellan {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-tahiti {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+.page-tierradelfuego {
+	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
+
+
 
 img.white-circle {
 	border-radius: 50%;
@@ -202,7 +374,7 @@ img.grey-circle {
 }
 
 .container_int_1 {
-	max-width: 1150px;
+	width: 1150px;
 	margin: 0px auto;
 	position: relative;
 	bottom: 20px;
@@ -275,7 +447,7 @@ img.grey-circle {
 }
 
 .container_int_2 {
-	max-width: 1150px;
+	width: 1150px;
 	margin: 0px auto;
 	position: relative;
 	bottom: 20px;
@@ -307,11 +479,11 @@ img.grey-circle {
 }
 
 footer.int_footer {
-	background-color: #373737;
+	background-color: #272727;
 	color: #fff;
 	margin: 0px auto;
 	font-family: "IM Fell English";
-	max-width: 1150px;
+	width: 1150px;
 	padding: 25px 40px 5px 40px;
 	p {
 		line-height: 25px;
