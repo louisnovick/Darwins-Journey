@@ -18,12 +18,8 @@ $().ready(function() {
 		$( this ).css("-moz-transition","all 0.3s");
 		$( this ).css("-o-transition","all 0.3s");
 		$( this ).css("transition","all 0.3s");
-		$.pgwModal({
-			    target: '#modalContent',
-			    title: 'Modal title 2',
-			    maxWidth: 800
-			});
 	});
+
 });
 
 

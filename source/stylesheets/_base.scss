@@ -67,10 +67,12 @@ a {
 		h1 {
 			font-size: 2.7em;
 			color: #fff;
-			line-height: 8px;
+			line-height: 40px;
 		}
 		p {
 			color: #fff;
+			position: relative;
+			bottom: 10px;
 		}
 		a {
 			font-size: 2.5em;
@@ -197,7 +199,6 @@ section{
 nav.timeline {
 	margin: 0px auto;
 	width: 1150px;
-	padding-top: 90px;
 	ul {
 		.activelink {
 			a {
@@ -205,19 +206,17 @@ nav.timeline {
 			}
 		}
 		.activepage {
-			font-family: $main-font;
+			font-family: "IM Fell English";
 			display: inline-block;
-			min-width: 90px;
-			max-width: 90px;
 			border-radius: 120px;
-			min-height: 90px;
-			max-height: 90px;
-			padding: 20px 10px;
+			padding: 32px 7px;
 			position: relative;
-			font-size: 1.1em;
+			width: 105px;
+			height: 105px;
+			font-size: 1em;
 			text-align: center;
-			bottom: 30px;
-			background-color: $light-grey;
+			bottom: 40px;
+			background-color: #585455;
 			border: 4px solid #fff;
 			color: #fff;
 			text-transform: capitalize;
@@ -241,8 +240,7 @@ nav.timeline {
 
 @media only screen and (max-width: 648px) {
 	.banner {
-		height: 55px;
-		max-width: 700px;
+		width: 85%;
 		h1 {
 			font-size: 1.2em;
 		}
@@ -283,7 +281,7 @@ nav.timeline {
   	z-index: 1;
 }
 .page-bahiablanca {
-	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background: url('../images/pages/bahiabg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
@@ -291,7 +289,7 @@ nav.timeline {
   	z-index: 1;
 }
 .page-bandaoriental {
-	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background: url('../images/pages/bandabg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
@@ -299,7 +297,7 @@ nav.timeline {
   	z-index: 1;
 }
 .page-buenosayres {
-	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background: url('../images/pages/buenosbg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
@@ -363,7 +361,7 @@ nav.timeline {
   	z-index: 1;
 }
 .page-maldonado {
-	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background: url('../images/pages/maldonadobg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
@@ -386,8 +384,16 @@ nav.timeline {
   	overflow: auto;
   	z-index: 1;
 }
+.page-riodejaneiro {
+	background: url('../images/pages/rio.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
 .page-rionegro {
-	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background: url('../images/pages/rionegrobg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
@@ -395,7 +401,7 @@ nav.timeline {
   	z-index: 1;
 }
 .page-santacruz {
-	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
+	background: url('../images/pages/santacruzbg.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	min-width: 100%;
   	min-height: 100%;
@@ -434,6 +440,8 @@ img.white-circle {
 	max-width: 120px;
 	display: inline-block;
 	border: 4px solid #fff;
+	min-width: 120px;
+	min-height: 120px;
 }
 
 img.grey-circle {
@@ -442,6 +450,8 @@ img.grey-circle {
 	max-width: 150px;
 	display: inline-block;
 	min-width: 150px;
+	max-height: 150px;
+	min-height: 150px;
 }
 
 .container_int_1 {
@@ -462,6 +472,7 @@ img.grey-circle {
 		float: right;
 		position: relative;
 		bottom: 10px;
+		padding-bottom: 20px;
 		.quote_1 {
 			display: block;
 			background-color: $red;
@@ -497,12 +508,12 @@ img.grey-circle {
 	color: #fff;
 	.titlecard {
 		max-width: 390px;
-		min-height: 350px;
+		min-height: 410px;
 		background-color: $dark-grey;
 		position: relative;
 		border: 3px solid #fff;
 		bottom: 40px;
-		padding: 0 15px;
+		padding: 10px 15px;
 		h1 {
 			max-width: 180px;
 			text-align: center;
@@ -555,7 +566,8 @@ footer.int_footer {
 	margin: 0px auto;
 	font-family: "IM Fell English";
 	width: 1150px;
-	padding: 25px 40px 5px 40px;
+	padding: 40px 40px 5px 40px;
+	line-height: 50px;
 	p {
 		line-height: 25px;
 	}
@@ -567,6 +579,7 @@ footer.int_footer {
 		position: relative;
 		margin-right: 20px;
 		bottom: 50px;
+		vertical-align: middle;
 	}
 	.fact {
 		display: inline-block;
@@ -595,8 +608,8 @@ footer.int_footer {
 			font-weight: bold;
 			display: inline-block;
 			padding: 5px 15px;
-			bottom: 90px;
-			left: 225px;
+			bottom: 120px;
+			left: 255px;
 		}
 	}
 }
@@ -639,6 +652,20 @@ footer.int_footer {
 	animation:scaleUp 1.5s both ease-in;   
 }
 
+.page-riodejaneiro.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-riodejaneiro.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
 .page-peru.ng-leave        {
     -webkit-transform-origin: 0% 0%;
 	-webkit-animation: rotateFall 1.5s both ease-in;
@@ -662,6 +689,77 @@ footer.int_footer {
 	animation: rotateFall 1.5s both ease-in;
 }
 .page-sc.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
+.page-maldonado.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-maldonado.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
+.page-rionegro.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-rionegro.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
+.page-bandaoriental.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-bandaoriental.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
+
+.page-buenosayres.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-buenosayres.ng-enter 		{ 
+    -webkit-animation:scaleUp 1.5s both ease-in;
+	-moz-animation:scaleUp 1.5s both ease-in;
+	animation:scaleUp 1.5s both ease-in;   
+}
+
+.page-santacruz.ng-leave      {
+    -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1.5s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1.5s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1.5s both ease-in;
+}
+.page-santacruz.ng-enter 		{ 
     -webkit-animation:scaleUp 1.5s both ease-in;
 	-moz-animation:scaleUp 1.5s both ease-in;
 	animation:scaleUp 1.5s both ease-in;   
@@ -701,103 +799,38 @@ footer.int_footer {
 	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
-/**************** LEAN MODAL *****************/
-
-/**
- * PgwModal - Version 2.0
- *
- * Copyright 2014, Jonathan M. Piat
- * http://pgwjs.com - http://pagawa.com
- *
- * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
- */
-body.pgwModalOpen {
-    overflow: hidden;
-}
-
-#pgwModalBackdrop {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9000;
-}
-
-#pgwModal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index : 9010;
-    overflow-x: auto;
-    overflow-y: scroll;
-    text-align: center;
-}
-
-#pgwModal .pm-container {
-    margin: 10px;
-}
-
-#pgwModal .pm-body {
-    display: inline-block;
-    max-width: 800px;
-    min-width: 300px;
+.tooltip{
+    display: inline;
     position: relative;
-    width: 100%;
-    z-index: 9020;
-    margin-top: 10px;
 }
 
-/**
- * NOTICE:
- * If you want to update the modal rendering, please only edit the content below.
- * And if you update a class name, remember to specify it in the plugin configuration.
- * Please don't change the class names prefixed by "pm-".
- */
-
-.pgwModalBackdrop {
-    background: #000;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
+.tooltip:after {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
-.pgwModal .pm-body {
-    background-color: #fff;
+.tooltip:hover:after{
+    background: $dark-grey;
     border-radius: 5px;
-    -webkit-box-shadow: 0 0px 5px 5px #555;
-    box-shadow: 0 0px 5px 5px #555;
-}
-
-.pgwModal .pm-title {
-    background: #e5e5e5;
-    padding: 5px 0 6px;
-    border-bottom: 1px solid #d5d5d5;
-    border-radius: 5px 5px 0 0;
-    font-size: 1rem;
-    min-height: 25px;
-}
-
-.pgwModal .pm-content {
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
-}
-
-.pgwModal .pm-close {
-    cursor: pointer;
+    bottom: 25px;
+    color: #fff;
+    content: attr(title);
+    left: 22%;
+    padding: 15px;
     position: absolute;
-    top: 9px;
-    right: 15px;
+    z-index: 98;
+    width: 107px;
+    text-align: center;
+    box-shadow: 0px 4px $light-grey;
 }
 
-.pgwModal .pm-close span.pm-icon {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAABIklEQVQ4T62T20oDQRBE+9EIGo1/H4gEQd8E74lJvKHiV+mmai7QNdu+ZFNwWKqmpzJhdq3rur0ShkMIwyGoMTsEl+AenDDw62WGmoAFOAcjWRdjdgX+Ck9gDPw6xbIN4MwvmEmHmFzCQRo+H0E6aRHL1sDP3EiHmLx5WQbrBv4Ic3+yuvYAxtIhJusUtKUf4LvJUhnQDm9SkNWe1MPsDhyD/v42SGEWT/oFfBl5BWFZ2huGWWfgB/gy8g7CVyrt7QVZLHsB//1lvoNhqZqstozPN/DZZPX2tUNMXFYvILr9dFLpEGO2KoNtWRVLezPSIcbsogyRWyC3WcTSZ8AZfnpT6RCDDx3MwTU4YuDXywzFUn6WU3Ag697sgzAcQhjuTmdbpLYNJt1Fr50AAAAASUVORK5CYII=);
-    display: block;
-    height: 20px;
-    width: 20px;
-}
+
+
+
+
+
+
 
 

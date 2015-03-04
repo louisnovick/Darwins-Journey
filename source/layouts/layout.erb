@@ -13,7 +13,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
     <script src="../javascripts/angular-animate.min.js"></script>
     <script src="../javascripts/angapp.js"></script>
-    <%= stylesheet_link_tag "normalize", "styles" %>
+    <%= stylesheet_link_tag "normalize","styles" %>
 
   </head>
 
@@ -33,28 +33,97 @@
 
 
     <nav class="slide-nav">
-      <div class="drawer">
-      </div>
+      <div class="drawer"></div>
       <ul>
         <li>
           <a href="#capeverde">
             <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
             <p> Cape de Verd Islands </p>
-          </a>
-        </li>
-        <li>
-          <a href="#peru" data-index="0">
+        </a></li>
+        <li><a href="#riodejaneiro">
+            <%= image_tag 'location-badge/rio1.jpg', :width => '80', :class => 'img-circle' %>
+            <p> Rio De Janeiro </p>
+        </a></li>
+        <li><a href="#maldonado">
+            <%= image_tag 'location-badge/maldonado.jpg', :width => '80', :class => 'img-circle' %>
+            <p> Maldonado </p>
+        </a></li>
+        <li><a href="#rionegro">
+            <%= image_tag 'location-badge/rionegro.jpg', :width => '80', :class => 'img-circle' %>
+            <p> Rio Negro </p>
+        </a></li>
+        <li><a href="#bahiablanca">
+            <%= image_tag 'location-badge/bahia.jpg', :width => '80', :class => 'img-circle' %>
+            <p> Bahia Blanca </p>
+        </a></li>
+        <li><a href="#buenosayres">
+            <%= image_tag 'location-badge/buenos.png', :width => '80', :class => 'img-circle' %>
+            <p> Buenos Ayres </p>
+        </a></li>
+        <li><a href="#bandaoriental">
+            <%= image_tag 'location-badge/banda.jpg', :width => '80', :class => 'img-circle' %>
+            <p> Banda Oriental and Pantagonia</p>
+        </a></li>
+        <li><a href="#santacruz">
+            <%= image_tag 'location-badge/santa.jpg', :width => '80', :class => 'img-circle' %>
+            <p> Santacruz </p>
+        </a></li>
+        <li><a href="#tierradelfuego">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Tierra Del Fuego </p>
+        </a></li>
+        <li><a href="#falklandislands">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Falkland Islands </p>
+        </a></li>
+        <li><a href="#straitofmagellan">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Strait of Magellan </p>
+        </a></li>
+        <li><a href="#chile">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Chile </p>
+        </a></li>
+        <li><a href="#chiloe">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Chiloe </p>
+        </a></li>
+        <li><a href="#concepcion">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Concepcion </p>
+        </a></li>
+        <li><a href="#cordillera">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Cordillera </p>
+        </a></li>
+        <li><a href="#peru">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
             <p> Peru </p>
-          </a>
-        </li>
-        <li><a href="#riodejaneiro">Rio de Janeiro</a></li>
-        <li><a href="#straitofmagellan">Strait of Magellan</a></li>
-        <li><a href="#tahitinewzealand">Tahiti &amp; New Zealand</a></li>
-        <li><a href="#tierradelfuego">Tierra Del Fuego</a></li>
+        </a></li>
+        <li><a href="#galapagos">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Galapagos </p>
+        </a></li>
+        <li><a href="#tahiti">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Tahiti </p>
+        </a></li>
+        <li><a href="#australia">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Australia </p>
+        </a></li>
+        <li><a href="#coral">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Coral </p>
+        </a></li>
+        <li><a href="#mauritius">
+            <%= image_tag 'location-badge/cape-verde.png', :width => '80', :class => 'img-circle' %>
+            <p> Mauritius </p>
+        </a></li>
       </ul>
     </nav>
 
 
-    <%= javascript_include_tag  "jquery","tubular","modal","main" %>
+    <%= javascript_include_tag  "jquery","tubular","main" %>
   </body>
 </html>

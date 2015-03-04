@@ -28,7 +28,7 @@
 				controller  : 'buenosayres',
 			})
 
-			.when('/capeverd', {
+			.when('/capeverde', {
 				templateUrl : 'pages/capeverd.html',
 				controller  : 'capeverd',
 			})
@@ -78,11 +78,6 @@
 				controller  : 'mauritius',
 			})
 
-			.when('/patagonia', {
-				templateUrl : 'pages/patagonia.html',
-				controller  : 'patagonia',
-			})
-
 			.when('/peru', {
 				templateUrl : 'pages/peru.html',
 				controller  : 'peru',
@@ -91,6 +86,11 @@
 			.when('/rionegro', {
 				templateUrl : 'pages/rionegro.html',
 				controller  : 'rionegro',
+			})
+
+			.when('/riodejaneiro', {
+				templateUrl : 'pages/riodejaneiro.html',
+				controller  : 'riodejaneiro',
 			})
 
 			.when('/santacruz', {
@@ -174,12 +174,12 @@
 		$scope.pageClass = 'page-mauritius';
 	});
 
-	darwin.controller('patagonia', function($scope) {
-		$scope.pageClass = 'page-patagonia';
-	});
-
 	darwin.controller('peru', function($scope) {
 		$scope.pageClass = 'page-peru';
+	});
+
+	darwin.controller('riodejaneiro', function($scope) {
+		$scope.pageClass = 'page-riodejaneiro';
 	});
 
 	darwin.controller('rionegro', function($scope) {
@@ -201,10 +201,6 @@
 	darwin.controller('tierradelfuego', function($scope) {
 		$scope.pageClass = 'page-tierradelfuego';
 	});
-
-
-
-
 
 
 
