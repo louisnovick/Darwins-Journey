@@ -45,6 +45,8 @@
 	darwin.controller('mainController', function($scope) {
 		$scope.message = 'Home';
 		$scope.pageClass = 'page-home';
+		
+
 	});
 
 	darwin.controller('peru', function($scope) {
@@ -76,8 +78,6 @@
 		$scope.message = 'Tierra Del Fuego';
 		$scope.pageClass = 'page-tdf';
 	});
-
-
 
 
 

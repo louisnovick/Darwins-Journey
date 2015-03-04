@@ -25,7 +25,8 @@ a {
 
 .homecontainer{
 	@include container-fixed();
-	padding-top: 160px;
+	margin-top: 15px;
+
 	.badge_container {
 		width: 100%;
 		height: auto;
@@ -49,29 +50,92 @@ a {
 		}
 	}
 	.start_container {
-		border-radius: 20px;
-		background-color: rgba(33,33,33,0.9);
+		border-radius: 4px;
+		background-color: rgba(33, 33, 33, 0.9);
 		text-align: center;
-		font-family: $main-font;
-		padding: 20px;
+		font-family: "IM Fell English";
+		padding: 28px 55px;
 		margin-bottom: 5px;
+		box-shadow: inset 0 0 0 8px rgba(33, 33, 33, 0.9), inset 0 0 0 11px gray;
 		h1 {
-			font-size: 3em;
+			font-size: 2.7em;
 			color: #fff;
-			line-height: 25px;
+			line-height: 8px;
+		}
+		p {
+			color: #fff;
 		}
 		a {
 			font-size: 2.5em;
-			background-color: #394E7B;
 			padding: 0px 80px;
-			border-radius: 10px;
+			background-image: radial-gradient(50% 154%, #017B98 51%, #3d7da0 100%);
+			box-shadow: 0px 3px 0px 0px #1C1C1C;
+			border-radius: 8px;
 		}
 	}
 }
 
+.card-container{
+	@include make-md-column(3);
+	padding: 15px;
+	.card{
+		padding: 30px 7px;
+		opacity: 0.89;
+		background: #F4F4F4;
+		box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.50);
+		border-radius: 10px;
+		text-align: center;
+		h3{
+			font-family: "IM Fell English";
+			font-size: 1.4em;
+			margin-top: 12px;
+			margin-bottom: 0;
+		}
+		p{
+			font-size: 0.8em;
+			padding: 0 10px;
+			text-align: left;
+			margin-bottom: 1.8em;
+		}
+		a{
+			background: #1EAD71;
+			box-shadow: 0px 3px 0px 0px #1C1C1C;
+			border-radius: 8px;
+			padding: 10px 20px;
+			h4{
+				display: inline;
+				margin: 0;
+				font-size: 17px;
+				color: #FFFFFF;
+				line-height: 21px;
+				text-shadow: 0px 2px 0px rgba(0,0,0,0.50);
+			}
+		}
+	}
+
+
+}
+
+
 .banner{
-	background: url(../images/banner.png) no-repeat;
+	background: #373737;
+	padding: 15px;
+	box-shadow: inset 0 0 0 6px rgba(33, 33, 33, 0.9), inset 0 0 0 9px rgb(240, 240, 240), inset 0 0 0 13px rgba(33, 33, 33, 0.9), inset 0 0 0 14px white;
+	width: 50%;
+	text-align: center;
+	color: #fff;
+	font-family: 'Josefin Slab', serif;
+	margin-bottom: 20px;
+	@include clearfix();
+	h3{
+		.lg-title{
+			font-size: 1.4em;
+		}
+	}
+	/*background: url(../images/banner.png) no-repeat;
 	padding: 70px;
+	margin-bottom: 20px;
+	color: #1B1B1B;*/
 }
 
 section{
@@ -196,5 +260,103 @@ section{
 	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
+/**************** LEAN MODAL *****************/
+
+/**
+ * PgwModal - Version 2.0
+ *
+ * Copyright 2014, Jonathan M. Piat
+ * http://pgwjs.com - http://pagawa.com
+ *
+ * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
+ */
+body.pgwModalOpen {
+    overflow: hidden;
+}
+
+#pgwModalBackdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+}
+
+#pgwModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index : 9010;
+    overflow-x: auto;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+#pgwModal .pm-container {
+    margin: 10px;
+}
+
+#pgwModal .pm-body {
+    display: inline-block;
+    max-width: 800px;
+    min-width: 300px;
+    position: relative;
+    width: 100%;
+    z-index: 9020;
+    margin-top: 10px;
+}
+
+/**
+ * NOTICE:
+ * If you want to update the modal rendering, please only edit the content below.
+ * And if you update a class name, remember to specify it in the plugin configuration.
+ * Please don't change the class names prefixed by "pm-".
+ */
+
+.pgwModalBackdrop {
+    background: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.pgwModal .pm-body {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0px 5px 5px #555;
+    box-shadow: 0 0px 5px 5px #555;
+}
+
+.pgwModal .pm-title {
+    background: #e5e5e5;
+    padding: 5px 0 6px;
+    border-bottom: 1px solid #d5d5d5;
+    border-radius: 5px 5px 0 0;
+    font-size: 1rem;
+    min-height: 25px;
+}
+
+.pgwModal .pm-content {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.pgwModal .pm-close {
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+}
+
+.pgwModal .pm-close span.pm-icon {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAABIklEQVQ4T62T20oDQRBE+9EIGo1/H4gEQd8E74lJvKHiV+mmai7QNdu+ZFNwWKqmpzJhdq3rur0ShkMIwyGoMTsEl+AenDDw62WGmoAFOAcjWRdjdgX+Ck9gDPw6xbIN4MwvmEmHmFzCQRo+H0E6aRHL1sDP3EiHmLx5WQbrBv4Ic3+yuvYAxtIhJusUtKUf4LvJUhnQDm9SkNWe1MPsDhyD/v42SGEWT/oFfBl5BWFZ2huGWWfgB/gy8g7CVyrt7QVZLHsB//1lvoNhqZqstozPN/DZZPX2tUNMXFYvILr9dFLpEGO2KoNtWRVLezPSIcbsogyRWyC3WcTSZ8AZfnpT6RCDDx3MwTU4YuDXywzFUn6WU3Ag697sgzAcQhjuTmdbpLYNJt1Fr50AAAAASUVORK5CYII=);
+    display: block;
+    height: 20px;
+    width: 20px;
+}
 
 

@@ -18,17 +18,16 @@
   </head>
 
   <body class="<%= page_classes %>"  ng-app="darwin">
-    <div id="main">
-      <div class="banner"></div>
-      <a href="#">Restart</a>
-      <!-- this is where content will be injected -->
+    <!-- This is the html view located in pages-->
+      
+        <div id="main">
+          <div class="page {{ pageClass }}" ng-view></div>
+          
+          <a href="#">Restart</a>
+          <!-- this is where content will be injected -->
 
-      <!-- This is Index.html.erb-->
-
-      <!-- This is the html view located in pages-->
-      <div class="page {{ pageClass }}" ng-view></div>
-
-    </div>
+          <!-- This is Index.html.erb-->
+        </div>
     <!-- Scrolling Side Navigation -->
 
     <nav class="slide-nav">
@@ -52,6 +51,6 @@
     <%= yield %>
 
 
-    <%= javascript_include_tag  "jquery","tubular","main" %>
+    <%= javascript_include_tag  "jquery","tubular","modal","main" %>
   </body>
 </html>

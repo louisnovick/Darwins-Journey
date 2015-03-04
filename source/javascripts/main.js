@@ -1,4 +1,4 @@
-$().ready(function() {
+$(document).ready(function() {
 	$('#video-bg').tubular({
 		videoId: 'XREElnb_wlQ',
 		start: 4
@@ -18,8 +18,18 @@ $().ready(function() {
 		$( this ).css("-moz-transition","all 0.3s");
 		$( this ).css("-o-transition","all 0.3s");
 		$( this ).css("transition","all 0.3s");
+		$.pgwModal({
+			    target: '#modalContent',
+			    title: 'Modal title 2',
+			    maxWidth: 800
+			});
 	});
+
+
+	
+
 });
+
 
 
 
