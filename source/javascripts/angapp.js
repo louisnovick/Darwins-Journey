@@ -8,6 +8,11 @@
 				controller  : 'mainController',
 			})
 
+			.when('/start', {
+				templateUrl : 'pages/start.html',
+				controller  : 'start',
+			})
+
 			.when('/australia', {
 				templateUrl : 'pages/australia.html',
 				controller  : 'australia',
@@ -118,6 +123,10 @@
 		$scope.pageClass = 'page-home';
 	});
 
+	darwin.controller('start', function($scope) {
+		$scope.pageClass = 'page-start';
+	});
+
 	darwin.controller('australia', function($scope) {
 		$scope.pageClass = 'page-australia';
 	});
@@ -203,10 +212,7 @@
 	});
 
 
-
-
-
-
+	
 
 
 

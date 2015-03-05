@@ -3,6 +3,7 @@ $dark-grey: #373737;
 $light-grey: #585455;
 $green: #71b4a2;
 $red: #885e6c;
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
 
 html {
 	height: 100%;
@@ -28,6 +29,10 @@ body {
 
 a {
 	color: #fff;
+}
+
+p{
+	font-family: 'Josefin Slab', serif !important;
 }
 
 .homecontainer{
@@ -57,6 +62,7 @@ a {
 		}
 	}
 	.start_container {
+		@include clearfix();
 		border-radius: 4px;
 		background-color: rgba(33, 33, 33, 0.9);
 		text-align: center;
@@ -101,7 +107,7 @@ a {
 			margin-bottom: 0;
 		}
 		p{
-			font-size: 0.8em;
+			font-size: 1em;
 			padding: 0 10px;
 			text-align: left;
 			margin-bottom: 1.8em;
@@ -129,6 +135,7 @@ a {
 	padding: 15px;
 	box-shadow: inset 0 0 0 6px rgba(33, 33, 33, 0.9), inset 0 0 0 9px rgb(240, 240, 240), inset 0 0 0 13px rgba(33, 33, 33, 0.9), inset 0 0 0 14px white;
 	width: 50%;
+	
 	text-align: center;
 	color: #fff;
 	font-family: 'Josefin Slab', serif;
@@ -196,10 +203,12 @@ section{
 }
 
 //interior
-nav.timeline {
+/* nav.timeline {
 	margin: 0px auto;
-	width: 1150px;
+	width: 100%;
+	@include clearfix();
 	ul {
+		@include make-md-column(12);
 		.activelink {
 			a {
 				background-color: $green;
@@ -236,11 +245,107 @@ nav.timeline {
 			}
 		}
 	}
+} */
+
+nav.timeline{
+	@include make-md-column(12);
+	@include clearfix;
+	padding-left: 0 !important;
+	background: rgba(102, 102, 102, 0.35);
+	margin-bottom: 35px;
+	.timeline-title{
+		font-family: "IM Fell English";
+		@include make-md-column(2);
+		color: #fff;
+		background: rgba(33,33,33,.9);
+		border-radius: 3px;
+		text-align: center;
+		padding: 12px;
+		h2{
+			margin: 0;
+		}
+		
+	}
+	.timeline-nav{
+		@include make-md-column(10);
+		ul{
+			margin: 0;
+			padding: 9px;
+			li {
+			  width: 1.5em; 
+			  
+			  margin: 6px -5px;
+			  display: inline-table;
+			  
+			}
+
+			li::before{
+			  content: '';
+			  position: absolute;
+			  top: .6em;
+			  left: -1em;
+			  width: 2.5em;
+			  height: .3em;
+			  background: white;
+			  z-index: -1;
+			}
+
+
+			li:first-child::before {
+			  display: none;
+			}
+
+			.active {
+			  background: dodgerblue;
+			}
+
+			.active ~ li {
+			  background: lightblue;
+			}
+
+			.active ~ li::before {
+			  background: lightblue;
+			}
+
+			a {
+				width: 25px;
+				height: 25px;
+				background-color: $red;
+				border-radius: 100px;
+				display: block;
+				margin-right: 20px;
+				border: 4px solid #fff;
+				float: left;
+				&:hover {
+					background-color: $green;
+				}
+			}
+			.activepage {
+				font-family: "IM Fell English";
+				display: inline-block;
+				border-radius: 120px;
+				padding: 32px 7px;
+				position: relative;
+				width: 105px;
+				height: 105px;
+				font-size: 1em;
+				text-align: center;
+				bottom: 40px;
+				background-color: #585455;
+				border: 4px solid #fff;
+				color: #fff;
+				text-transform: capitalize;
+			}
+		}
+		
+	}
+	
 }
 
 @media only screen and (max-width: 648px) {
 	.banner {
-		width: 85%;
+		
+		@include clearfix();
 		h1 {
 			font-size: 1.2em;
 		}
@@ -408,6 +513,15 @@ nav.timeline {
   	overflow: auto;
   	z-index: 1;
 }
+
+.page-start {
+	background: url('../images/pages/startbg.jpg') no-repeat center center fixed; 
+	background-size: cover;
+	min-width: 100%;
+  	min-height: 100%;
+  	overflow: auto;
+  	z-index: 1;
+}
 .page-straitofmagellan {
 	background: url('../images/capeverdbg.jpg') no-repeat center center fixed; 
 	background-size: cover;
@@ -455,50 +569,40 @@ img.grey-circle {
 }
 
 .container_int_1 {
-	width: 1150px;
-	margin: 0px auto;
-	position: relative;
-	bottom: 20px;
+	@include make-md-column(12);
+	@include clearfix();
+	
+	
 	p {
 		line-height: 25px;
 	}
 	.left_1 {
-		width: 40%;
-		float: left;
+		@include make-md-column(4);
 	}
 
 	.right_1 {
-		width: 60%;
-		float: right;
-		position: relative;
-		bottom: 10px;
-		padding-bottom: 20px;
+		@include make-md-column(8);
 		.quote_1 {
-			display: block;
-			background-color: $red;
-			padding: 30px 40px;
-			border-radius: 20px;
+			background-color: #885e6c;
+			padding: 8px 39px;
+			border-radius: 8px;
 			margin-bottom: 30px;
 			p {
 				font-size: 1.3em;
 				color: #fff;
-				margin: 0px auto;
-				max-width: 500px;
 			}
 		}
 		.passage_1 {
-			img.grey-circle {
-				float: left;
-				width: 25%;
-				position: relative;
-				right: 15px;
+			@include clearfix();
+			.p1-image{
+				@include make-md-column(4);
+
 			}
-			p {
-				float: right;
-				width: 75%;
+			.p1-text{
+				@include make-md-column(8);
 				background: $light-grey;
-				border-radius: 20px;
-				padding: 25px;
+				border-radius: 8px;
+				padding: 5px 22px;
 			}
 		}
 	}
@@ -507,110 +611,122 @@ img.grey-circle {
 	font-family: $main-font;
 	color: #fff;
 	.titlecard {
-		max-width: 390px;
-		min-height: 410px;
+		box-shadow: inset 0 0 0 5px rgba(33, 33, 33, 0.9), inset 0 0 0 7px #f0f0f0, inset 0 0 0 13px rgba(33, 33, 33, 0.9), inset 0 0 0 13px white;
 		background-color: $dark-grey;
 		position: relative;
-		border: 3px solid #fff;
-		bottom: 40px;
-		padding: 10px 15px;
+		
+		//bottom: 30px;
+		padding: 18px 15px;
+		.title-img{
+			@include make-md-column(6);	
+		}
+		.title-title{
+			@include make-md-column(6);
+		}
 		h1 {
-			max-width: 180px;
 			text-align: center;
-			display: inline-block;
-			position: relative;
-			margin-left: 30px;
-			top: 20px;
+			margin: 0;
 		}
 		hr {
 			margin: 18px 0;
 		}
+
 	}
 }
 
 .container_int_2 {
-	width: 1150px;
-	margin: 0px auto;
-	position: relative;
-	bottom: 20px;
-	padding: 0 40px;
+	@include make-md-column(12);
+	@include clearfix();
+	
+	
+	//padding: 0 40px;
 	font-family: "IM Fell English";
 	color: #fff;
+	margin-top: 27px;
 	p {
 		line-height: 25px;
 	}
 	.left_2 {
-		width: 55%;
+		@include make-md-column(6);
 		clear: both;
 		p {
 			background-color: #373737;
 			position: relative;
-			border-radius: 30px;
-			padding: 30px 20px;
+			border-radius: 7px;
+			padding: 25px 30px;
 		}
 	}
 	.right_2 {
-		float: right;
-		width: 45%;
-		position: relative;
-		bottom: 175px;
-		img.grey-circle {
-			margin: 0 0px 0px 35px;
+		@include make-md-column(6);
+		
+		.p2-img-1{
+			@include make-md-column(6);
 		}
 	}
 }
 
 footer.int_footer {
+	box-shadow: inset 0 0 0 8px rgba(33, 33, 33, 0.9), inset 0 0 0 9px rgb(240, 240, 240), inset 0 0 0 13px rgba(33, 33, 33, 0.9), inset 0 0 0 14px white;
 	background-color: #272727;
 	color: #fff;
-	margin: 0px auto;
+	margin: 10px 0px;
 	font-family: "IM Fell English";
-	width: 1150px;
-	padding: 40px 40px 5px 40px;
-	line-height: 50px;
-	p {
-		line-height: 25px;
-	}
-	img {
-		border-radius: 50%;
-		border: 4px solid #fff;
-		max-width: 110px;
-		display: inline-block;
-		position: relative;
-		margin-right: 20px;
-		bottom: 50px;
-		vertical-align: middle;
-	}
-	.fact {
-		display: inline-block;
-		h5 {
-			font-size: 1.3rem;
-			margin: 0;
+	//width: 1150px;
+	@include make-md-column(12);
+	padding: 40px 0px 28px 0px;
+	.fact-container{
+		@include make-md-column(7);
+		.fact-img{
+			@include make-md-column(3);
+			img {
+				border-radius: 50%;
+				border: 4px solid #fff;
+				max-width: 110px;
+				display: inline-block;
+			
+				margin-right: 20px;
+				vertical-align: middle;
+			}
 		}
-		p {
-			max-width: 450px;
+		.fact{
+			@include make-md-column(9);
+			h5 {
+				font-size: 1.3rem;
+				margin: 0;
+			}
+			p {
+
+				max-width: 450px;
+			}
+
 		}
+
 	}
 	.nextup {
-		float: right;
-		position: relative;
-		bottom: 200px;
-		right: 270px;
+		@include make-md-column(5);
 		h5 {
+			@include make-md-column(6);
 			font-size: 1.9rem;
 			padding: 0;
+			margin: 0;
+			padding: 25px 0px;
 		}
-		a {
-			background-color: #1daf71;
-			border-radius: 5px;
-			font-size: 1.5rem;
-			position: relative;
-			font-weight: bold;
-			display: inline-block;
-			padding: 5px 15px;
-			bottom: 120px;
-			left: 255px;
+		.next-btn{
+			@include make-md-column(6);
+			padding: 49px 30px;
+			a {
+				
+				background-color: #1daf71;
+				border-radius: 5px;
+				font-size: 1.5rem;
+				position: relative;
+				font-weight: bold;
+				display: inline-block;
+				padding: 5px 15px;
+				
+			}
 		}
+		
 	}
 }
 
@@ -799,11 +915,12 @@ footer.int_footer {
 	from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
+
 .tooltip{
     display: inline;
     position: relative;
 }
-
+/*
 .tooltip:after {
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
@@ -825,6 +942,128 @@ footer.int_footer {
     text-align: center;
     box-shadow: 0px 4px $light-grey;
 }
+*/
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  width:300px;
+  color: #FFFFFF;
+  background: #000000;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 4px;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 25%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.7;
+  top: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
+
+.title-head{
+	@include clearfix();
+}
+
+/*********** modal **********/
+
+
+
+.start-img{
+	@include make-md-column-offset(1);
+	@include make-md-column(3);
+	img{
+		@include img-responsive();
+	}
+}
+.start-img-right{
+	
+	@include make-md-column(3);
+	img{
+		@include img-responsive();
+	}
+}
+
+.start-text{
+	@include make-md-column(7);
+	background-color: #373737;
+			position: relative;
+			border-radius: 7px;
+			padding: 25px 30px;
+			font-family: "IM Fell English";
+	color: #fff;
+	h1{
+		margin: 0;
+	}
+
+}
+.start-text-right{
+	@include make-md-column-offset(1);
+	@include make-md-column(7);
+	background-color: #373737;
+			position: relative;
+			border-radius: 7px;
+			padding: 25px 30px;
+			font-family: "IM Fell English";
+	color: #fff;
+	h1{
+		margin: 0;
+	}
+
+}
+
+
+.start-blurb{
+	margin-bottom: 25px;
+}
+
+.start-blurb-right{
+	margin-bottom: 25px;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
