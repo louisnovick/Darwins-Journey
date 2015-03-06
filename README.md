@@ -1,34 +1,16 @@
 #Darwins Journey
 
-Splash page example - citruscoders.com/darwin/
+Project can be seen at http://sulley.cah.ucf.edu/~mi249120/dig4104c/p2/#/
 
-##To Do
+If you pull this project onto your computer 
 
-Louis
+run `mm` and open localhost:4567
 
-* Timeline on Interior Page
+Thanks to:
+Miguel Ramos
+Geoff Miller
 
-* Develop Interior Pages for each island
 
-Miguel
-
-*
-
-*
-
-Jeff
-
-*
-
-*
-
-#####Figure out what each informational page looks like.  What content should go there?
-
-#####Develop functionality for start button and reset button.
-
-* Start button:  Begins the exhibit. Gives user a starting point for their journey.
-
-* Reset button:  Restarts the journey without reloading the page.
 
 
 
