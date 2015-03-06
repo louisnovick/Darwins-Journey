@@ -342,6 +342,15 @@ nav.timeline{
 	
 }
 
+.page-maldonado .title-title h1 {
+	position: relative;
+	right: 20px;
+}
+
+nav.timeline .timeline-nav ul .activelink a {
+	background-color: $green;
+}
+
 @media only screen and (max-width: 648px) {
 	.banner {
 		
@@ -754,7 +763,7 @@ footer.int_footer {
 	animation:scaleUp 1.5s both ease-in;    
 }
 
-.page-capeverde.ng-leave      {
+.page-capeverd.ng-leave      {
     -webkit-transform-origin: 0% 0%;
 	-webkit-animation: rotateFall 1.5s both ease-in;
 	-moz-transform-origin: 0% 0%;
@@ -762,7 +771,7 @@ footer.int_footer {
 	transform-origin: 0% 0%;
 	animation: rotateFall 1.5s both ease-in;
 }
-.page-capeverde.ng-enter 		{ 
+.page-capeverd.ng-enter 		{ 
     -webkit-animation:scaleUp 1.5s both ease-in;
 	-moz-animation:scaleUp 1.5s both ease-in;
 	animation:scaleUp 1.5s both ease-in;   
